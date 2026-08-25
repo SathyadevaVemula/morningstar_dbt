@@ -4,6 +4,6 @@ WITH stg_customers AS (
         CONCAT(first_name, ' ', last_name) AS customer_name,
         email AS email_address,
         phone AS home_phone
-    FROM FUNDS_MORNINGSTAR.FUNDS_RAW.DIM_CUSTOMER
+    FROM {{ source('funds_raw', 'DIM_CUSTOMER')}}
 )
 SELECT * FROM stg_customers

@@ -1,0 +1,11 @@
+sources:
+  - name: funds_raw
+    database: FUNDS_MORNINGSTAR
+    schema: FUNDS_RAW
+
+    tables:
+      - name: DIM_CUSTOMER
+      - name: DIM_DATE
+      - name: DIM_PRODUCT
+      - name: DIM_STORE
+      - name: SALES_ORDERS
