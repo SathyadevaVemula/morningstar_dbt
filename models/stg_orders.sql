@@ -1,3 +1,8 @@
+{{ config(
+    pre_hook="{{ log_start_time(this) }}",
+    post_hook="{{ log_end_time(this) }}"
+)}}
+
 SELECT
     o.ORDER_PRIORITY,
     o.DISCOUNT,
